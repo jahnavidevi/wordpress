@@ -4,7 +4,7 @@
 
 
 #set the base image for thi insrtallation
-FROM centos:7
+FROM centos:8.3.2011
 
 #File Author or Maintainer
 MAINTAINER Jahnavi
