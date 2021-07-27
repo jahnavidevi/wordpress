@@ -4,7 +4,7 @@
 
 
 #set the base image for thi insrtallation
-FROM centos:8.3.2011
+FROM centos:7
 
 #File Author or Maintainer
 MAINTAINER Jahnavi
@@ -16,7 +16,7 @@ ADD wordpress.conf /var/httpd/conf.d/
 # pre-reqs
 RUN yum clean all && \
 yum -y  update && \
-yum -y install httpd mod_rewrite mod_ssl mod_env php php-common php-cli php-mysql mysql-server unzip wget && \
+yum -y install httpd mod_rewrite mod_ssl mod_env php:7 php-common php-cli php-mysql mysql-server unzip wget && \
 rm -rf /var/cache/* 
 
 
